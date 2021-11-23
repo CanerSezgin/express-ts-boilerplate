@@ -2,13 +2,17 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-export const config = {
+const mainConfig = {
   env: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 3000,
+}
+
+export const config = {
+  ...mainConfig,
   meta: {
-    isDev: process.env.NODE_ENV === 'development',
-    isProd: process.env.NODE_ENV === 'production'
-  }
+    isDev: mainConfig.env === 'development',
+    isProd: mainConfig.env === 'production',
+  },
 }
 
 export const checkEnvVars = (envVarsMustList: string[] = []) => {

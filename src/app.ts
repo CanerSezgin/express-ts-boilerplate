@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
 import { json } from 'body-parser'
-import apiRoutesV1 from './routes'
+import apiRoutesV1 from './routes/v1'
 import errorHandler from './utils/errorHandler'
 import NotFoundError from './utils/errors/not-found-error'
 

@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { config } from '../config'
+import { config } from '../../config'
 
 // Routes
 import wordsRoute from './words.route'

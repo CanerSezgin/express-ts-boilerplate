@@ -5,6 +5,9 @@ dotenv.config()
 const mainConfig = {
   env: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 3000,
+  mongoDB: {
+    uri: process.env.MONGODB_URI!
+  }
 }
 
 export const config = {
